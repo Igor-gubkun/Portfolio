@@ -1,0 +1,45 @@
+// Шрифты
+
+@font-face {
+	font-family: 'Gilroy';
+	src: url('../fonts/fonts/Gilroy-ExtraBold.eot');
+	src: local('☺'), url('../fonts/fonts/Gilroy-ExtraBold.woff') format('woff'), url('../fonts/fonts/Gilroy-ExtraBold.ttf') format('truetype'), url('../fonts/fonts/Gilroy-ExtraBold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gilroy-Medium';
+	src: url('../fonts/fonts/gilroy-medium.eot');
+	src: url('../fonts/fonts/gilroy-medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/fonts/gilroy-medium.woff2') format('woff2'),
+		url('../fonts/fonts/gilroy-medium.woff') format('woff'), 
+		url('../fonts/fonts/gilroy-medium.ttf') format('truetype'),
+		url('../fonts/fonts/gilroy-medium.svg#gilroy-medium') format('svg');
+}
+
+// ==========================================================
+
+// Переменные
+
+$fz: 18px;
+$fzt: 34px;
+$ff: "Gilroy";
+$ff_2: "Gilroy-Medium";
+$maxWidth: 1280;
+
+// ==========================================================
+
+// Миксины
+
+$maxWidth: 1280;
+@mixin adaptiv-font($pcSize, $mobSize) {
+ $addSize: $pcSize - $mobSize;
+ $maxWidth: $maxWidth - 320;
+ font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+// ==========================================================
+
+
+//margin-top: calc(((#{48 + px} + #{18} * ((100vw - 320px) / #{1280}))*2) - ((#{18 + px} + #{15} * ((100vw - 320px) / #{1280}))*2));
