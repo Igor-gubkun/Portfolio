@@ -1,0 +1,167 @@
+@media only screen and (max-width: 945px) {
+	.container{
+		width: 90%;
+	}
+}
+@media only screen and (max-width: 600px){
+	.header {
+		transition: .5s;
+		width: 100%;
+		height: 100%;
+		padding-top: 40px;
+		position: fixed;
+		top: 0;
+		left: 100%;
+		z-index: 10;
+		background-color: white;
+		ul > li > a{
+			display: inline-block;
+		}
+		ul > li > a:before,
+		ul > li > a:after {
+			display: none;
+		}
+		.nav {
+			display: block;
+			margin: 0px;
+			padding: 0px 0px;
+			border-bottom: 0px solid black;
+			li {
+				display: list-item;
+				a {
+					font-size: 40px;
+					font-family: $ff;
+					color: #828282;
+					margin-bottom: 20px;
+					&:hover {
+						color: #828282;
+						transition: 300ms;
+					}
+				}
+			}
+			.last_nav{
+				margin-bottom: 0;
+			}
+		}
+		.button{
+			display: inline;
+			position: absolute;
+			top: 3px;
+			right: 0;
+		}
+	}
+
+	// header_active
+	.header_active{
+		transition: .5s;
+		left: 0;
+	}
+
+	.lang_1 {
+		display: block;
+		position: absolute;
+		right: 30px;
+		bottom: 5px;
+		transform-origin: right bottom;
+		transform: rotate(90deg);
+		p {
+			font-size: 30px;
+			font-family: $ff;
+		a{
+			color: black;
+		}
+	}
+}
+	.lang{
+		display: none;
+	}
+	.up{
+		display: block;
+		position: relative;
+	}
+	
+	// menu
+	.up{
+		.menu{
+			height: 30px;
+			padding-top: 3px;
+			display: block;
+			position: absolute;
+			right: 0;
+		}
+	}
+	.pc_img{
+		display: none;
+	}
+	.tel_img{
+		display: block;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
+	.skill{
+		padding: 60px 0px 80px;
+		.container{
+			max-width: 450px;
+			.programs{
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				.xd, .figma{
+					margin-top: 50px;
+				}
+			}
+		}
+	}
+	.portfolio{
+		padding: 60px 0px 80px;
+	}
+	.contacts{ 
+		padding: 60px 0px 80px;
+		.social_networks{
+			max-width: 50%;
+		}
+	}
+
+	.about_me{
+		padding: 60px 0px 80px;
+	}
+	.home {
+		padding-top: 40px;
+		margin-bottom: 80px;
+		img {
+			max-width: 100%;
+		}
+		.menu_burger_unactive{
+			max-height: 21px;
+		}
+	}
+}
+
+@media only screen and (max-width: 450px){
+	.skill{
+		padding: 80px 0px 80px;
+		.container{
+			max-width: 200px;
+			.title{
+				margin-bottom: 35px;
+			}
+			.programs{
+				display: grid;
+				grid-template-columns: 1fr;
+				.program{
+					padding-top: 30px;
+					margin-top: 0px;					
+				}
+			}
+		}
+	}
+	.contacts{ 
+		padding: 60px 0px 80px;
+		.title{
+			margin-bottom: 60px;
+		}
+		.social_networks{
+			max-width: 70%;
+		}
+	}
+}

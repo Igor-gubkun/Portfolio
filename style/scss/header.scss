@@ -1,0 +1,63 @@
+.header {
+	width: 100%;
+}
+.container {
+	max-width: 945px;
+	margin: 0 auto;
+	position: relative;
+}
+.nav {
+	display: flex;
+	justify-content: space-between;
+	margin: 33px 0px 0px 0px;
+	padding-bottom: 37px;
+	border-bottom: 2px solid black;
+	li {
+		a {
+			@include adaptiv-font(18, 16);
+			font-family: $ff;
+			color: #828282;
+			&:hover {
+				color: black;
+				transition: 300ms;
+			}
+		}
+	}
+}
+.button{
+	display: none;
+}
+
+// line
+ul > li {
+	display: inline-block;
+}
+ul > li > a {
+	display: block;
+	position: relative;
+	text-decoration: none;
+	color: #000;
+}
+ul > li > a:before,
+ul > li > a:after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	width: 0%;
+	height: 0px;
+	background: #828282;
+	transition: 0.3s;
+}
+ul > li > a:before {
+	left: 50%;
+}
+ul > li > a:after {
+	right: 50%;
+}
+ul > li > a:hover:before,
+ul > li > a:hover:after {
+	background: black;
+	height: 3px;
+	width: 50%;
+}
+//----------------
